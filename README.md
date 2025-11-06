@@ -31,6 +31,29 @@ This application uses three key components:
 - **Foundry Local** installed (recommended) - [Installation Guide](https://aka.ms/ai-foundry)
 - Compatible GPU/NPU (optional, but recommended for better performance)
 
+### 📥 Download Required Model (Important!)
+
+**Note**: The `model.onnx` file is not included in this repository due to its large size (~250MB).
+
+**Quick Setup - Choose One Option:**
+
+**Option 1: Auto-download via Script (Recommended)**
+```powershell
+python download_model.py
+```
+Select option 2: "BERT SQuAD" model when prompted.
+
+**Option 2: Manual Download**
+1. Download: [BERT SQuAD ONNX Model](https://github.com/onnx/models/raw/main/validated/text/machine_comprehension/bert-squad/model/bertsquad-12.onnx)
+2. Rename the downloaded file to `model.onnx`
+3. Place it in the project root folder
+
+**Option 3: Use Foundry Local (No manual download needed)**
+```powershell
+python foundry_model_manager.py
+```
+This will use Foundry Local's managed models instead.
+
 ### Installation Steps
 
 #### Option A: Using Foundry Local (Recommended)
